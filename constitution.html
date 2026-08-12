@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конституция ДРИ</title>
+    <link rel="icon" type="image/svg+xml" href="flag.svg">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -11,68 +12,196 @@
             src: url('Ostrovsky-Bold_0.otf') format('opentype');
             font-weight: bold;
         }
-        :root { --deep-blue: #19193e; --purple: #5b2c8e; --cream: #fdfaf3; }
+        :root {
+            --deep-blue: #1E1E50;
+            --purple: #5b2c8e;
+            --white: #ffffff;
+            --light-bg: #f4f7fa;
+            --text: #1a1a1a;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'PT Serif', serif; background: #e8e0d5; }
+        body { font-family: 'PT Serif', serif; background: var(--light-bg); color: var(--text); }
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 1rem 3rem; background: var(--deep-blue); color: white;
             position: sticky; top: 0; z-index: 10;
         }
         .logo img { height: 45px; }
-        nav a { color: white; text-decoration: none; margin-left: 2rem; font-weight: bold; font-family: 'Ostrovsky', sans-serif; }
-        .layout { display: flex; max-width: 1200px; margin: 2rem auto; gap: 2rem; padding: 0 2rem; }
-        .sidebar { width: 250px; background: white; padding: 1.5rem; border-radius: 8px; position: sticky; top: 100px; height: fit-content; }
-        .sidebar h3 { font-family: 'Ostrovsky', sans-serif; color: var(--deep-blue); margin-bottom: 1rem; }
+        nav a {
+            color: white; text-decoration: none; margin-left: 2rem;
+            font-weight: bold; font-family: 'Ostrovsky', sans-serif;
+        }
+        nav a:hover { color: var(--purple); }
+        .layout {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            font-family: 'Ostrovsky', sans-serif;
+            color: var(--deep-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--purple);
+            padding-bottom: 0.5rem;
+        }
         .sidebar ul { list-style: none; }
         .sidebar li { margin-bottom: 0.5rem; }
-        .sidebar a { color: var(--deep-blue); text-decoration: none; font-weight: bold; }
+        .sidebar a {
+            text-decoration: none;
+            color: var(--deep-blue);
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.2s;
+        }
         .sidebar a:hover { color: var(--purple); }
-        .content { flex: 1; background: var(--cream); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .section-title { font-family: 'Ostrovsky', sans-serif; color: var(--deep-blue); font-size: 1.8rem; margin: 1.5rem 0 1rem; }
-        .article { margin-bottom: 1rem; }
-        .article-num { font-weight: 700; color: var(--deep-blue); }
-        footer { text-align: center; padding: 2rem; color: var(--deep-blue); }
+        .content {
+            flex: 1;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            font-family: 'PT Serif', serif;
+        }
+        .content h2 {
+            font-family: 'Ostrovsky', sans-serif;
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-left: 4px solid var(--purple);
+            padding-left: 15px;
+        }
+        .content h3 {
+            font-family: 'Ostrovsky', sans-serif;
+            color: var(--deep-blue);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .article {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e0e0e0;
+        }
+        .article-num {
+            font-weight: 700;
+            color: var(--deep-blue);
+        }
+        .article-text {
+            margin-top: 0.3rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--deep-blue);
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .layout { flex-direction: column; padding: 0 1rem; }
+            .sidebar { position: static; width: 100%; max-height: none; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
+        <div class="logo"><img src="flag.svg" alt="Флаг ДРИ"></div>
         <nav>
             <a href="index.html">Главная</a>
             <a href="citizenship.html">Гражданство</a>
             <a href="constitution.html">Конституция</a>
+            <a href="news.html">Новости</a>
             <a href="elections.html">Выборы</a>
         </nav>
     </header>
 
     <div class="layout">
-        <aside class="sidebar" id="sidebar"><h3>Разделы</h3><ul id="nav-list"></ul></aside>
-        <main class="content" id="constitution-content">Загрузка...</main>
+        <aside class="sidebar" id="sidebar">
+            <h3>Разделы</h3>
+            <ul id="nav-list"></ul>
+        </aside>
+        <main class="content" id="constitution-content">
+            Загрузка Конституции...
+        </main>
     </div>
 
+    <footer>© 2026 Демократическая Республика Интернета</footer>
+
     <script>
-        fetch('constitution.json')
-            .then(r => r.json())
-            .then(data => {
-                const content = document.getElementById('constitution-content');
-                const navList = document.getElementById('nav-list');
-                content.innerHTML = `<p style="font-style:italic">${data.document.preamble}</p>`;
-                // списки почётных людей и экстремистов можно добавить при желании
-                data.sections.forEach((section, i) => {
-                    const secDiv = document.createElement('div');
-                    secDiv.innerHTML = `<h2 class="section-title">${section.section}</h2>`;
-                    navList.innerHTML += `<li><a href="#section-${i}">${section.section}</a></li>`;
-                    secDiv.id = `section-${i}`;
-                    section.chapters.forEach(ch => {
-                        ch.articles.forEach(art => {
-                            secDiv.innerHTML += `<div class="article"><span class="article-num">Статья ${art.article}. ${art.title}</span><p>${art.text}</p></div>`;
+        const LANG_KEY = 'dri-lang';
+        let currentLang = localStorage.getItem(LANG_KEY) || 'ru';
+
+        async function loadConstitution(lang) {
+            const url = lang === 'ru' ? 'constitution_ru.json' : `constitution_${lang}.json`;
+            try {
+                const resp = await fetch(url);
+                if (!resp.ok) throw new Error('Not found');
+                const data = await resp.json();
+                renderConstitution(data);
+                document.querySelectorAll('.lang-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.lang === lang);
+                });
+            } catch (e) {
+                document.getElementById('constitution-content').innerHTML =
+                    `<p>Перевод на ${lang.toUpperCase()} пока не загружен. Приходите позже.</p>`;
+            }
+        }
+        function renderConstitution(data) {
+            const content = document.getElementById('constitution-content');
+            const navList = document.getElementById('nav-list');
+            content.innerHTML = '';
+            navList.innerHTML = '';
+
+            if (data.document && data.document.preamble) {
+                const p = document.createElement('p');
+                p.style.fontStyle = 'italic';
+                p.textContent = data.document.preamble;
+                content.appendChild(p);
+            }
+
+            if (data.sections) {
+                data.sections.forEach((section, idx) => {
+                    const sectionId = `section-${idx}`;
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.id = sectionId;
+                    sectionDiv.innerHTML = `<h2>${section.section}</h2>`;
+
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="#${sectionId}">${section.section}</a>`;
+                    navList.appendChild(li);
+
+                    section.chapters.forEach(chapter => {
+                        const chapterTitle = document.createElement('h3');
+                        chapterTitle.textContent = chapter.chapter;
+                        sectionDiv.appendChild(chapterTitle);
+
+                        chapter.articles.forEach(art => {
+                            const artDiv = document.createElement('div');
+                            artDiv.className = 'article';
+                            artDiv.innerHTML = `<span class="article-num">Статья ${art.article}. ${art.title}</span><p class="article-text">${art.text}</p>`;
+                            sectionDiv.appendChild(artDiv);
                         });
                     });
-                    content.appendChild(secDiv);
+                    content.appendChild(sectionDiv);
                 });
-            });
+            }
+        }
+        loadConstitution(currentLang);
     </script>
-    <footer>© 2026 Демократическая Республика Интернета</footer>
 </body>
 </html>
