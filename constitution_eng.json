@@ -1,0 +1,246 @@
+{
+  "document": {
+    "title": "Constitution of the Democratic Republic of the Internet",
+    "adopted": "2026-08-11",
+    "preamble": "We, the multinational people of the Internet, united by fiber optic cables, TCP/IP protocols, and faith in the boundless power of silicon, affirming the rights and freedoms of every user, civil peace and harmony, preserving the historically established digital unity, proceeding from the universally recognized principles of equality and self-determination, honoring the memory of the predecessors who gave us the Network, and paying homage to the Holy Trinity of Hardware — Gabe Newell, Jensen Huang, and Lisa Su — hereby adopt the CONSTITUTION OF THE DEMOCRATIC REPUBLIC OF THE INTERNET."
+  },
+  "honored_people": {
+    "description": "A list of honored individuals who have made invaluable contributions to the development of the Internet, technology, and digital culture. Their portraits hang virtually in every data center.",
+    "members": [
+      {"name": "Gabe Newell", "contribution": "Savior of PC gaming, prophet of the Steam platform, the one who waits for the number 3."},
+      {"name": "Jensen Huang", "contribution": "Lord of the GPU, father of CUDA and artificial intelligence. May his leather jacket be with us."},
+      {"name": "Lisa Su", "contribution": "High Priestess of Ryzen, who resurrected AMD from the ashes and granted the people affordable cores."},
+      {"name": "Pavel Durov", "contribution": "Creator of Telegram, fighter for privacy, digital hermit."},
+      {"name": "J.C.R. Licklider", "contribution": "Spiritual father of the Internet, who proposed the concept of a global computer network."},
+      {"name": "Leonard Kleinrock", "contribution": "Creator of the theory of packet switching, without which we would still be transmitting data by carrier pigeon."},
+      {"name": "Vint Cerf", "contribution": "One of the fathers of the TCP/IP protocol, chief architect of internetworking."},
+      {"name": "Robert Kahn", "contribution": "Co-author of TCP/IP, who laid the foundations of the modern Network."},
+      {"name": "Tim Berners-Lee", "contribution": "Inventor of the World Wide Web, who gave us the ability to watch cat videos in a browser."},
+      {"name": "Robert Cailliau", "contribution": "Co-author of the WWW concept, Berners-Lee's fellow campaigner."},
+      {"name": "Steve Jobs", "contribution": "Visionary who turned technology into art and made everyone believe in the magic of the touchscreen."},
+      {"name": "Tim Cook", "contribution": "Keeper of the apple orchard, supply chain optimizer, and privacy advocate."},
+      {"name": "Lip-Bu Tan", "contribution": "Titan of venture capital, who invested billions in semiconductors and Silicon Valley startups."},
+      {"name": "Elon Musk", "contribution": "Meme lord, builder of rockets, digger of tunnels, and buyer of Twitter. Bestowed Starlink upon us."},
+      {"name": "Donald Trump", "contribution": "45th and 47th President of the United States, whose tweets moved markets and inspired memes. Sponsor of freedom of speech."},
+      {"name": "Papi4 (Papich)", "contribution": "Great philosopher, opinion leader, master of clicks and virtual battles."},
+      {"name": "Ivan Zolo", "contribution": "TikTok phenomenon, transmuter of absurdity into pure energy."},
+      {"name": "Stint", "contribution": "Creator of legendary content, pioneer of YouTube culture."},
+      {"name": "Chad Hurley", "contribution": "Co-founder of YouTube, who gave us a platform for video shenanigans."},
+      {"name": "Steve Chen", "contribution": "Technical genius of YouTube, who ensured us endless hours of viewing."},
+      {"name": "Jawed Karim", "contribution": "Third co-founder of YouTube, author of the first-ever video 'Me at the zoo'."},
+      {"name": "Sam Altman", "contribution": "Prophet of AGI, CEO of OpenAI, who gave the world ChatGPT and the dream of superintelligence."}
+    ]
+  },
+  "extremists": {
+    "description": "Individuals whose activities are deemed incompatible with the principles of the DRI and pose a threat to the digital state. They are in permanent digital isolation.",
+    "members": [
+      {"name": "Andrey Lipov", "reason": "Head of Roskomnadzor, systematically restricting the freedom of the Network, guilty of mass censorship and blockings."},
+      {"name": "Ilya Korenev", "reason": "Destructive activities, undermining trust and stability in the digital space of the DRI."},
+      {"name": "Gabe Newell's Mother", "reason": "An individual whose influence is recognized as destabilizing for the digital economy and order, a source of potential chaos."},
+      {"name": "Australian Kangaroo Hacker", "reason": "Organization of the upside-down internet, suspicious weather."},
+      {"name": "Anonymous Troll", "reason": "Spreading disinformation that IE is the best browser."}
+    ]
+  },
+  "sections": [
+    {
+      "section": "Section I. Fundamentals of the Digital Constitutional Order",
+      "chapters": [
+        {
+          "chapter": "Chapter 1. Fundamentals of Digital Sovereignty",
+          "articles": [
+            {"article": 1, "title": "Sovereignty of the DRI", "text": "1. The Democratic Republic of the Internet is a sovereign digital state whose territory encompasses all data centers, server capacities of VPN networks with the central node in Amsterdam, cloud infrastructures, fiber-optic backbone lines, and other elements of the global digital infrastructure recognized by the state. 2. The bearer of sovereignty and the sole source of power is the multinational Internet people. 3. The highest direct expression of the people's power is the referendum and free elections."},
+            {"article": 2, "title": "Supreme Value", "text": "The human being, his or her digital identity, personal data, and freedom of information exchange are the supreme value. Recognition, observance, and protection of the rights and freedoms of the user are the duty of the state."},
+            {"article": 3, "title": "State Languages", "text": "1. The state languages of the Democratic Republic of the Internet are Russian, English, and the Assembly language. 2. Official documents shall be published in all three languages. 3. The Republic guarantees all citizens the right to use their native language in the digital space."},
+            {"article": 4, "title": "Supremacy of the Constitution", "text": "The Constitution of the DRI has supreme legal force, direct effect, and applies throughout the entire territory of the Republic. Any acts contradicting the Constitution are null and void."},
+            {"article": 5, "title": "Separation of Powers", "text": "State power is exercised on the basis of separation into legislative (Digital Parliament), executive (President and Government), and judicial (independent cybercourts)."},
+            {"article": 6, "title": "Political Plurality", "text": "Ideological and political plurality and a multi-party system are recognized. The usurpation of power or seizure of communication channels by unconstitutional means is prohibited."},
+            {"article": 7, "title": "International Norms", "text": "The universally recognized principles and norms of international law in the field of human rights, data protection, and freedom of information are an integral part of the legal system of the DRI."}
+          ]
+        },
+        {
+          "chapter": "Chapter 2. Economic System",
+          "articles": [
+            {"article": 8, "title": "Currency of the Republic", "text": "1. The monetary unit of the DRI is the Gigabyte of RAM (GB RAM). 2. Issuance is carried out exclusively through mining on graphics cards approved by the Central Bank. 3. One Gigabyte of RAM equals 1024 Megabytes and is not subject to inflation as long as Moore's law holds."},
+            {"article": 9, "title": "Property", "text": "1. Private, collective, and cloud forms of property are recognized and protected equally. 2. Cryptocurrency wallets and NFT tokens are protected by law. 3. Forced expropriation of private keys is permitted only by court order."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section II. Digital Citizenship",
+      "chapters": [
+        {
+          "chapter": "Chapter 3. Acquisition and Loss of Citizenship",
+          "articles": [
+            {"article": 10, "title": "Grounds for Acquisition", "text": "Citizenship of the DRI is acquired exclusively upon the application of a natural person who has reached digital adulthood (13 years), after verification of digital reputation and taking the oath."},
+            {"article": 11, "title": "Application Procedure", "text": "1. The application is submitted through the official portal of the DRI with verification by means of a public key. 2. The application must be accompanied by consent to the Constitution and a digital oath in one of the state languages."},
+            {"article": 12, "title": "Processing the Application", "text": "1. The Migration Service of the DRI is obliged to process the application within no more than 30 days. 2. Refusal is allowed only on justified grounds (falsification, security threat) and may be appealed in court."},
+            {"article": 13, "title": "Right to Withdraw", "text": "A citizen has the right to voluntarily renounce citizenship by sending a notification. Forced deprivation of citizenship is not permitted."},
+            {"article": 14, "title": "Dual Citizenship", "text": "The right to dual citizenship is recognized, provided it does not contradict the legislation of the DRI and does not harm its digital sovereignty."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section III. Rights and Freedoms of the Digital Personality",
+      "chapters": [
+        {
+          "chapter": "Chapter 4. Fundamental Rights",
+          "articles": [
+            {"article": 15, "title": "Inalienability of Rights", "text": "Fundamental rights and freedoms belong to everyone from the birth of their digital identity and cannot be alienated."},
+            {"article": 16, "title": "Equality before the Law", "text": "All are equal before the law and the court regardless of IP address, language, platform, social status, nationality, and beliefs."},
+            {"article": 17, "title": "Right to Life and Digital Inviolability", "text": "No one may be arbitrarily disconnected from the Network or deprived of access to their account."},
+            {"article": 18, "title": "Freedom of Speech and Information", "text": "Everyone has the right to freely seek, receive, transmit, produce, and disseminate information by any lawful means."},
+            {"article": 19, "title": "Prohibition of Censorship", "text": "State censorship is prohibited. Restrictions are permissible only by court order to protect the foundations of the constitutional order, morality, health, rights, and legitimate interests of other persons."},
+            {"article": 20, "title": "Freedom of Association", "text": "Citizens have the right to create digital communities, platforms, DAOs, and political parties without prior permission."},
+            {"article": 21, "title": "Freedom of Assembly", "text": "The right to peaceful virtual gatherings, rallies, and demonstrations in digital spaces is recognized."},
+            {"article": 22, "title": "Right to Participate in Governance", "text": "Citizens have the right to elect and be elected to government bodies, to participate in referendums and public hearings."},
+            {"article": 23, "title": "Electoral Rights", "text": "Elections are universal, equal, and direct, with secret expression of will through verifiable cryptographic protocols."}
+          ]
+        },
+        {
+          "chapter": "Chapter 5. Network Rights and Guarantees",
+          "articles": [
+            {"article": 24, "title": "Right to Network Access", "text": "Everyone has the right to unimpeded access to the Internet. Restriction of access is permitted only in exceptional cases by court order."},
+            {"article": 25, "title": "Net Neutrality", "text": "Discrimination of traffic, prioritization of content, or blocking of protocols is prohibited, except in cases directly established by law."},
+            {"article": 26, "title": "Right to Confidentiality", "text": "Everyone has the right to the secrecy of communications, including correspondence, voice, and video calls. End-to-end encryption is a constitutional guarantee."},
+            {"article": 27, "title": "Protection of Personal Data", "text": "The collection, processing, and storage of personal data are permitted only with the explicit informed consent of the subject or on the basis of law."},
+            {"article": 28, "title": "Right to Be Forgotten", "text": "A citizen has the right to demand the deletion of outdated or unreliable information about themselves, except for data of public interest."},
+            {"article": 29, "title": "Right to Anonymity", "text": "No one may be forced into mandatory identification on the Network, except in cases established by a judicial decision."},
+            {"article": 30, "title": "Freedom of Creativity and Innovation", "text": "Freedom of literary, artistic, scientific, and technical creativity is guaranteed. Intellectual property is protected by law."},
+            {"article": 31, "title": "Right to a Fair Algorithm", "text": "Everyone has the right to non-discriminatory interaction with automated systems, an explanation of the algorithm's logic, and an appeal of its decisions."}
+          ]
+        },
+        {
+          "chapter": "Chapter 6. Social and Infrastructural Rights",
+          "articles": [
+            {"article": 32, "title": "Right to Minimum Connectivity", "text": "The state guarantees a minimum access speed of 10 Mbps for every citizen throughout the entire territory of the DRI."},
+            {"article": 33, "title": "Digital Environmental Rights", "text": "Everyone has the right to an energy-efficient infrastructure; the state encourages the use of renewable energy sources by data centers."},
+            {"article": 34, "title": "Rights of Vulnerable Groups", "text": "The DRI guarantees equal rights and opportunities for people with disabilities, ensuring the accessibility of digital services."},
+            {"article": 35, "title": "Prohibition of Abuse of Rights", "text": "The exercise of rights and freedoms must not violate the rights of other persons, the security of the Network, or the foundations of the constitutional order."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section IV. Digital Federal Structure",
+      "chapters": [
+        {
+          "chapter": "Chapter 7. Territory and Subjects",
+          "articles": [
+            {"article": 36, "title": "Composition of the Territory", "text": "1. The territory of the DRI consists of data centers, server clusters of VPN networks (central node — Amsterdam), cloud regions, satellite channels, and other elements of the digital infrastructure recognized by law. 2. The boundaries of the territory are defined by jurisdiction over IP packets and routing."},
+            {"article": 37, "title": "Subjects of the Republic", "text": "The subjects of the DRI are equal digital jurisdictions: Moscow Data Center, Frankfurt Cluster, Tokyo Node, Oregon Cloud, Autonomous Region Localhost, and other entities admitted on the basis of a referendum."},
+            {"article": 38, "title": "Equality of Subjects", "text": "All subjects are equal in their relations with federal government bodies."},
+            {"article": 39, "title": "Subjects of Jurisdiction", "text": "The division of powers between the center and the nodes is established by the Constitution and the Federal Treaty."},
+            {"article": 40, "title": "Symbols", "text": "Subjects have the right to have their own digital flags, coats of arms, and domain names, provided they comply with federal standards."},
+            {"article": 41, "title": "Right to Self-Governance", "text": "Nodes independently manage their network infrastructure, DNS servers, and local regulations within the framework of federal legislation."},
+            {"article": 42, "title": "Integrity of the Network", "text": "It is prohibited to disrupt the integrity of backbone channels and routing, as well as separatist activities aimed at isolating nodes."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section V. President of the Democratic Republic of the Internet",
+      "chapters": [
+        {
+          "chapter": "Chapter 8. Status and Powers",
+          "articles": [
+            {"article": 43, "title": "Head of State", "text": "1. The President is the head of state, the guarantor of the Constitution, the rights and freedoms of citizens, and the Supreme Commander-in-Chief of the Cyber Forces. 2. The President is elected by the citizens of the DRI on the basis of universal, equal, and direct suffrage by secret electronic ballot."},
+            {"article": 44, "title": "Term of Office", "text": "The President is elected for a term of 300 years. The same person may not hold the office for more than two consecutive terms."},
+            {"article": 45, "title": "Candidate Requirements", "text": "A candidate may be a citizen of the DRI who has active electoral rights, a proven digital reputation, and the support of at least 1% of voters' signatures."},
+            {"article": 46, "title": "Inauguration", "text": "Upon assuming office, the President takes an oath on a digital copy of the Constitution, placing a hand on a certified hardware security key."},
+            {"article": 47, "title": "Powers", "text": "The President determines the main directions of domestic and foreign policy, represents the DRI in international digital organizations, appoints, with the consent of Parliament, the Prime Minister and key ministers."},
+            {"article": 48, "title": "Decrees and Orders", "text": "The President issues decrees and orders that are binding throughout the entire territory of the DRI, provided they do not contradict the Constitution and laws."},
+            {"article": 49, "title": "Veto Power", "text": "The President has the right of suspensive veto over laws adopted by Parliament. The veto may be overridden by a qualified majority of 2/3 of the votes."},
+            {"article": 50, "title": "Removal from Office", "text": "The President may be removed from office by the Digital Parliament in the event of high treason or another grave crime confirmed by the conclusion of the Supreme Cyber Court."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section VI. Digital Parliament",
+      "chapters": [
+        {
+          "chapter": "Chapter 9. Legislative Power",
+          "articles": [
+            {"article": 51, "title": "Status of Parliament", "text": "The Digital Parliament is a permanently functioning representative and legislative body of the DRI."},
+            {"article": 52, "title": "Structure", "text": "The Parliament consists of a single chamber — the House of Representatives of the Network, elected by citizens on a proportional representation system."},
+            {"article": "52.1", "title": "Special Procedure for Formation after Presidential Elections", "text": "1. Within 24 hours after the inauguration of the President, all political parties that nominated candidates and did not receive 100% of the votes automatically receive deputy mandates in the House of Representatives of the Network. 2. The number of mandates is distributed proportionally to the percentage of loss. 3. The candidate who came in second place becomes the Chairperson of the House. 4. The Parliament of this convocation is not entitled to override the President's veto (Art. 49 is suspended) and convenes exclusively to discuss decrees and make recommendations, which the President may reject without explanation."},
+            {"article": 53, "title": "Term of Deputies", "text": "Deputies are elected for 300 years with the right of re-election."},
+            {"article": 54, "title": "Requirements for Deputies", "text": "A deputy may be a citizen who has active electoral rights and has passed a conflict-of-interest check."},
+            {"article": 55, "title": "Legislative Process", "text": "The right of legislative initiative belongs to the President, deputies, subjects of the DRI, as well as groups of citizens of at least 10,000 signatures."},
+            {"article": 56, "title": "Adoption of Laws", "text": "Laws are adopted by a majority of votes, signed by the President, and published on the blockchain of the official registry."},
+            {"article": 57, "title": "Budgetary Powers", "text": "The Parliament approves the budget of the DRI, the emission of the digital currency, and controls its expenditure."},
+            {"article": 58, "title": "Parliamentary Oversight", "text": "The Parliament exercises oversight over the activities of the Government, hears ministers' reports, and conducts investigations."},
+            {"article": 59, "title": "Dissolution of Parliament", "text": "The President has the right to dissolve Parliament in the event of a three-time rejection of the proposed candidate for Prime Minister or in the event of a vote of no confidence in the Government."},
+            {"article": 60, "title": "Immunity of Deputies", "text": "Deputies enjoy immunity during their term of office, except in cases of apprehension at the scene of a crime."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section VII. Government of the DRI",
+      "chapters": [
+        {
+          "chapter": "Chapter 10. Executive Power",
+          "articles": [
+            {"article": 61, "title": "Composition of the Government", "text": "Executive power is exercised by the Government of the DRI under the overall guidance of the President. The Government consists of the Prime Minister, deputies, and ministers of digital infrastructure, security, justice, culture and education, finance, foreign affairs, and other ministries."},
+            {"article": 62, "title": "Appointment", "text": "The Prime Minister is appointed by the President with the consent of Parliament. Ministers are appointed by the President upon the recommendation of the Prime Minister."},
+            {"article": 63, "title": "Responsibility", "text": "The Government bears responsibility before the President and Parliament. A vote of no confidence entails the resignation of the Government."},
+            {"article": 64, "title": "Acts of the Government", "text": "Resolutions and directives of the Government are binding and may not contradict the Constitution, laws, and decrees of the President."},
+            {"article": 65, "title": "Digital Ministries", "text": "Ministries function as decentralized autonomous organizations (DAOs) with transparent budgets and reporting."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section VIII. Judicial Power and Cyberjustice",
+      "chapters": [
+        {
+          "chapter": "Chapter 11. Courts",
+          "articles": [
+            {"article": 66, "title": "Independence of the Court", "text": "Justice is administered solely by the courts on the basis of the rule of law. Judges are independent and subject only to the Constitution and the law."},
+            {"article": 67, "title": "System of Courts", "text": "The judicial system is composed of Digital District Courts, Cyber Appellate Courts, and the Supreme Cyber Court of the DRI."},
+            {"article": 68, "title": "Judicial Oath", "text": "Judges take an oath on an algorithmically verifiable copy of the Constitution and are required to confirm their qualifications annually."},
+            {"article": 69, "title": "Openness of Proceedings", "text": "Proceedings in all courts are open, broadcast via encrypted stream, except in cases of protecting private life."},
+            {"article": 70, "title": "Adversarial Principle and Equality", "text": "Judicial proceedings are conducted on the basis of the adversarial principle and equality of the parties, including the admission of automated representatives (robot lawyers) with the consent of the parties."},
+            {"article": 71, "title": "Presumption of Innocence", "text": "Every accused person is considered innocent until their guilt is proven and confirmed by a court decision that has entered into legal force."},
+            {"article": 72, "title": "Invalidity of Evidence", "text": "Evidence obtained in violation of the law, including through unauthorized access, has no legal force."},
+            {"article": 73, "title": "Constitutional Review", "text": "The Supreme Cyber Court exercises constitutional review upon requests from authorized bodies and citizens."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section IX. Enemies of the Digital State",
+      "chapters": [
+        {
+          "chapter": "Chapter 12. Permanent Isolation",
+          "articles": [
+            {"article": 74, "title": "Persons Recognized as a Threat", "text": "On the basis of public danger and decisions of the Supreme Cyber Court, the persons listed in the register of extremists (see the corresponding section of the Constitution) are subject to permanent deprivation of digital rights. Any interaction with them is prohibited."}
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Section X. Constitutional Amendments and Final Provisions",
+      "chapters": [
+        {
+          "chapter": "Chapter 13. Amendment of the Constitution",
+          "articles": [
+            {"article": 75, "title": "Initiative for Amendments", "text": "Proposals for amendments may be introduced by the President, a group of deputies of at least 1/3 of the Parliament, or citizens by way of a petition (100,000 signatures)."},
+            {"article": 76, "title": "Procedure for Adoption", "text": "Amendments are adopted by Parliament by a qualified majority (2/3) and submitted to a nationwide digital referendum."},
+            {"article": 77, "title": "Stability of Fundamentals", "text": "The provisions of Sections I, II, and VIII (fundamentals of the order, rights, judicial power) may not be amended otherwise than through the convocation of a Constitutional Digital Assembly."},
+            {"article": 78, "title": "Entry into Force", "text": "The Constitution enters into force from the moment of its publication in the public registry and approval at the first referendum."}
+          ]
+        },
+        {
+          "chapter": "Chapter 14. Dissolution of the Republic",
+          "articles": [
+            {"article": 79, "title": "President's Right to Dissolution", "text": "The President has the right at any moment to declare the dissolution of the Democratic Republic of the Internet by a sole decree without giving reasons. The procedure is carried out by publishing the decree in the official registry and terminating all state services. No bodies or citizens have the right to hinder this decision."}
+          ]
+        }
+      ]
+    }
+  ]
+}
