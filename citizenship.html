@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стать гражданином ДРИ</title>
+    <link rel="icon" type="image/svg+xml" href="flag.svg">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Ostrovsky';
-            src: url('Ostrovsky-Bold_0.otf') format('opentype');
+            src: url('fonts/Ostrovsky-Bold_0.otf') format('opentype');
             font-weight: bold;
         }
         :root {
-            --deep-blue: #19193e;
+            --deep-blue: #1E1E50;
             --purple: #5b2c8e;
             --white: #ffffff;
             --light-bg: #f4f7fa;
@@ -74,11 +75,12 @@
 </head>
 <body>
     <header>
-        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
+        <div class="logo"><img src="flag.svg" alt="Флаг ДРИ"></div>
         <nav>
             <a href="index.html">Главная</a>
             <a href="citizenship.html">Гражданство</a>
             <a href="constitution.html">Конституция</a>
+            <a href="news.html">Новости</a>
             <a href="elections.html">Выборы</a>
         </nav>
     </header>
@@ -184,7 +186,6 @@
                 formData.append('name', name);
                 formData.append('email', email);
                 formData.append('message', `Новая заявка от ${name} (${email})`);
-                // добавляем аудиофайл, если есть
                 if (audioBlob) {
                     formData.append('attachment', audioBlob, 'voice-message.webm');
                 }
