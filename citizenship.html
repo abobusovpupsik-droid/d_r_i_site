@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стать гражданином ДРИ</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Ostrovsky';
+            src: url('Ostrovsky-Bold_0.otf') format('opentype');
+            font-weight: bold;
+        }
+        :root {
+            --deep-blue: #0D0D34;
+            --purple: #5b2c8e;
+            --white: #ffffff;
+            --light-bg: #f4f7fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'PT Serif', serif; background: var(--light-bg); }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 3rem; background: var(--deep-blue); color: white;
+            position: sticky; top: 0; z-index: 10;
+        }
+        .logo img { height: 45px; }
+        nav a {
+            color: white; text-decoration: none; margin-left: 2rem;
+            font-weight: bold; font-family: 'Ostrovsky', sans-serif;
+        }
+        nav a:hover { color: var(--purple); }
+        .container {
+            max-width: 700px; margin: 3rem auto; padding: 2rem;
+            background: white; border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        h1 { font-family: 'Ostrovsky', sans-serif; color: var(--deep-blue); margin-bottom: 2rem; }
+        label { display: block; margin: 1rem 0 0.3rem; font-weight: bold; color: var(--deep-blue); }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%; padding: 12px; border: 1px solid #ccc;
+            border-radius: 4px; font-size: 1rem;
+        }
+        .voice-recorder {
+            display: flex; align-items: center; gap: 1rem; margin: 1rem 0;
+        }
+        .record-btn {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: var(--purple); color: white; border: none;
+            font-size: 1.5rem; cursor: pointer;
+        }
+        .record-btn.recording { background: red; animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255,0,0,0); }
+            100% { box-shadow: 0 0 0 0; }
+        }
+        .audio-player { display: none; align-items: center; gap: 1rem; }
+        .btn {
+            background: var(--purple); color: white; padding: 12px 24px;
+            border: none; border-radius: 4px; cursor: pointer; font-weight: bold;
+        }
+        .btn:hover { background: #482172; }
+        .checkbox-group {
+            display: flex; align-items: center; gap: 0.5rem; margin: 1rem 0;
+        }
+        .submit-btn { width: 100%; padding: 14px; font-size: 1.2rem; background: var(--deep-blue); }
+        .success-msg {
+            display: none; background: #e6ffed; padding: 1.5rem;
+            text-align: center; border-radius: 8px; margin-top: 1rem;
+        }
+        footer { text-align: center; padding: 2rem; color: var(--deep-blue); opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="citizenship.html">Гражданство</a>
+            <a href="constitution.html">Конституция</a>
+            <a href="elections.html">Выборы</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Заявление о приёме в гражданство</h1>
+        <form id="citizenForm" novalidate>
+            <label for="name">Полное имя</label>
+            <input type="text" id="name" name="name" required placeholder="Имя Фамилия">
+
+            <label for="email">Email / Telegram</label>
+            <input type="email" id="email" name="email" required placeholder="email@example.com">
+
+            <label>Цифровая присяга (голосовое сообщение)</label>
+            <div class="voice-recorder">
+                <button type="button" id="recordButton" class="record-btn">🎤</button>
+                <span id="recordStatus">Нажмите для записи присяги</span>
+            </div>
+            <div class="audio-player" id="audioPlayer">
+                <audio id="audioPlayback" controls></audio>
+                <button type="button" id="deleteAudio" class="btn" style="background:#e74c3c;">Удалить</button>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">Клянусь чтить Святую Троицу Железа и соблюдать Конституцию ДРИ</label>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Отправить заявку</button>
+        </form>
+        <div class="success-msg" id="successMessage">
+            <h2>Заявка принята!</h2>
+            <p>Ожидайте паспорт гражданина ДРИ на указанный email.</p>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const WEB3FORMS_ACCESS_KEY = '__WEB3FORMS_ACCESS_KEY__';
+
+            let mediaRecorder;
+            let audioChunks = [];
+            let audioBlob = null;
+
+            const recordBtn = document.getElementById('recordButton');
+            const recordStatus = document.getElementById('recordStatus');
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioPlayback = document.getElementById('audioPlayback');
+            const deleteAudioBtn = document.getElementById('deleteAudio');
+            const form = document.getElementById('citizenForm');
+            const successMsg = document.getElementById('successMessage');
+
+            recordBtn.addEventListener('click', async () => {
+                if (mediaRecorder && mediaRecorder.state === 'recording') {
+                    mediaRecorder.stop();
+                    recordBtn.classList.remove('recording');
+                    recordStatus.textContent = 'Запись завершена';
+                    return;
+                }
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+                    mediaRecorder.onstop = () => {
+                        audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                        const url = URL.createObjectURL(audioBlob);
+                        audioPlayback.src = url;
+                        audioPlayer.style.display = 'flex';
+                    };
+                    mediaRecorder.start();
+                    recordBtn.classList.add('recording');
+                    recordStatus.textContent = 'Идёт запись...';
+                } catch (err) {
+                    alert('Не удалось получить доступ к микрофону.');
+                }
+            });
+
+            deleteAudioBtn.addEventListener('click', () => {
+                audioPlayer.style.display = 'none';
+                audioPlayback.src = '';
+                audioBlob = null;
+                recordStatus.textContent = 'Нажмите для записи присяги';
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!document.getElementById('agree').checked) {
+                    alert('Необходимо согласиться с Конституцией');
+                    return;
+                }
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                if (!name || !email) {
+                    alert('Заполните обязательные поля');
+                    return;
+                }
+
+                const formData = new FormData();
+                formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+                formData.append('subject', `Заявка на гражданство ДРИ от ${name}`);
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('message', `Новая заявка от ${name} (${email})`);
+                // добавляем аудиофайл, если есть
+                if (audioBlob) {
+                    formData.append('attachment', audioBlob, 'voice-message.webm');
+                }
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData,
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        form.style.display = 'none';
+                        successMsg.style.display = 'block';
+                    } else {
+                        alert('Ошибка: ' + (result.message || 'неизвестная ошибка'));
+                    }
+                } catch (error) {
+                    alert('Сетевая ошибка: ' + error.message);
+                }
+            });
+        })();
+    </script>
+    <footer>© 2026 Демократическая Республика Интернета</footer>
+</body>
+</html>
