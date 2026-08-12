@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages with Web3Forms Key
+name: Deploy to GitHub Pages with Formspree
 
 on:
   push:
@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Replace access key placeholder
+      - name: Replace Formspree endpoint placeholder
         run: |
-          sed -i "s/__WEB3FORMS_ACCESS_KEY__/${{ secrets.WEB3FORMS_KEY }}/g" citizenship.html
+          sed -i "s|__FORMSPREE_ENDPOINT__|${{ secrets.FORMSPREE_ENDPOINT }}|g" citizenship.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
