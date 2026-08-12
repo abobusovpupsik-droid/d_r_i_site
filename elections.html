@@ -4,32 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выборы ДРИ</title>
+    <link rel="icon" type="image/svg+xml" href="flag.svg">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        @font-face { font-family: 'Ostrovsky'; src: url('Ostrovsky-Bold_0.otf') format('opentype'); font-weight: bold; }
-        :root { --deep-blue: #19193e; --purple: #5b2c8e; }
+        @font-face {
+            font-family: 'Ostrovsky';
+            src: url('fonts/Ostrovsky-Bold_0.otf') format('opentype');
+            font-weight: bold;
+        }
+        :root {
+            --deep-blue: #1E1E50;
+            --purple: #5b2c8e;
+            --white: #ffffff;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--deep-blue); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: 'PT Serif', serif; }
-        header { position: fixed; top: 0; width: 100%; background: rgba(13,13,52,0.9); padding: 1rem 3rem; display: flex; justify-content: space-between; }
+        body {
+            background: var(--deep-blue);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'PT Serif', serif;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(30, 30, 80, 0.95);
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .logo img { height: 45px; }
-        nav a { color: white; margin-left: 2rem; text-decoration: none; font-family: 'Ostrovsky', sans-serif; }
-        .message h1 { font-family: 'Ostrovsky', sans-serif; font-size: 3rem; }
-        .message p { font-size: 1.2rem; opacity: 0.8; }
+        nav a {
+            color: white;
+            margin-left: 2rem;
+            text-decoration: none;
+            font-family: 'Ostrovsky', sans-serif;
+            font-weight: bold;
+        }
+        nav a:hover { color: var(--purple); }
+        .message h1 {
+            font-family: 'Ostrovsky', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .message p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            text-align: center;
+        }
+        footer {
+            position: fixed;
+            bottom: 1rem;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
+        <div class="logo"><img src="flag.svg" alt="Флаг ДРИ"></div>
         <nav>
             <a href="index.html">Главная</a>
             <a href="citizenship.html">Гражданство</a>
             <a href="constitution.html">Конституция</a>
+            <a href="news.html">Новости</a>
             <a href="elections.html">Выборы</a>
         </nav>
     </header>
     <div class="message">
         <h1>Выборы президента ДРИ</h1>
-        <p>Следующие выборы состоятся после роспуска текущей администрации. Следите за обновлениями.</p>
+        <p>Следующие выборы состоятся после роспуска текущей администрации. Следите за новостями.</p>
     </div>
+    <footer>© 2026 Демократическая Республика Интернета</footer>
 </body>
 </html>
