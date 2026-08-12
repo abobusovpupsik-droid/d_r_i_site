@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конституция ДРИ</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Ostrovsky';
+            src: url('Ostrovsky-Bold_0.otf') format('opentype');
+            font-weight: bold;
+        }
+        :root { --deep-blue: #0D0D34; --purple: #5b2c8e; --cream: #fdfaf3; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'PT Serif', serif; background: #e8e0d5; }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 3rem; background: var(--deep-blue); color: white;
+            position: sticky; top: 0; z-index: 10;
+        }
+        .logo img { height: 45px; }
+        nav a { color: white; text-decoration: none; margin-left: 2rem; font-weight: bold; font-family: 'Ostrovsky', sans-serif; }
+        .layout { display: flex; max-width: 1200px; margin: 2rem auto; gap: 2rem; padding: 0 2rem; }
+        .sidebar { width: 250px; background: white; padding: 1.5rem; border-radius: 8px; position: sticky; top: 100px; height: fit-content; }
+        .sidebar h3 { font-family: 'Ostrovsky', sans-serif; color: var(--deep-blue); margin-bottom: 1rem; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 0.5rem; }
+        .sidebar a { color: var(--deep-blue); text-decoration: none; font-weight: bold; }
+        .sidebar a:hover { color: var(--purple); }
+        .content { flex: 1; background: var(--cream); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .section-title { font-family: 'Ostrovsky', sans-serif; color: var(--deep-blue); font-size: 1.8rem; margin: 1.5rem 0 1rem; }
+        .article { margin-bottom: 1rem; }
+        .article-num { font-weight: 700; color: var(--deep-blue); }
+        footer { text-align: center; padding: 2rem; color: var(--deep-blue); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="citizenship.html">Гражданство</a>
+            <a href="constitution.html">Конституция</a>
+            <a href="elections.html">Выборы</a>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar" id="sidebar"><h3>Разделы</h3><ul id="nav-list"></ul></aside>
+        <main class="content" id="constitution-content">Загрузка...</main>
+    </div>
+
+    <script>
+        fetch('constitution.json')
+            .then(r => r.json())
+            .then(data => {
+                const content = document.getElementById('constitution-content');
+                const navList = document.getElementById('nav-list');
+                content.innerHTML = `<p style="font-style:italic">${data.document.preamble}</p>`;
+                // списки почётных людей и экстремистов можно добавить при желании
+                data.sections.forEach((section, i) => {
+                    const secDiv = document.createElement('div');
+                    secDiv.innerHTML = `<h2 class="section-title">${section.section}</h2>`;
+                    navList.innerHTML += `<li><a href="#section-${i}">${section.section}</a></li>`;
+                    secDiv.id = `section-${i}`;
+                    section.chapters.forEach(ch => {
+                        ch.articles.forEach(art => {
+                            secDiv.innerHTML += `<div class="article"><span class="article-num">Статья ${art.article}. ${art.title}</span><p>${art.text}</p></div>`;
+                        });
+                    });
+                    content.appendChild(secDiv);
+                });
+            });
+    </script>
+    <footer>© 2026 Демократическая Республика Интернета</footer>
+</body>
+</html>
