@@ -78,7 +78,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><img src="flag.svg" alt="Флаг ДРИ"></div>
+        <div class="logo"><img src="flag.png" alt="Флаг ДРИ"></div>
         <nav>
             <a href="index.html">Главная</a>
             <a href="citizenship.html">Гражданство</a>
@@ -90,8 +90,7 @@
 
     <div class="container" id="formContainer">
         <h1>Заявление о приёме в гражданство</h1>
-        <form id="citizenForm" method="POST" enctype="multipart/form-data"
-              action="__FORMSPREE_ENDPOINT__">
+        <form id="citizenForm">
             <!-- Антиспам: скрытое поле-ловушка -->
             <div class="honeypot">
                 <label for="_honey">Оставьте поле пустым</label>
@@ -131,7 +130,10 @@
     </div>
 
     <script>
-        // Проверяем, была ли отправка (редирект с ?success=1)
+        // ====== ВАЖНО: Этот плейсхолдер будет заменён на реальный endpoint Formspree при деплое ======
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkjwbglk';
+
+        // Проверяем, была ли отправка (если ранее использовался redirect)
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('success')) {
             document.getElementById('formContainer').style.display = 'none';
@@ -168,7 +170,6 @@
                     audioPlayback.src = url;
                     audioPlayer.style.display = 'flex';
 
-                    // Конвертируем в base64 и сохраняем в скрытое поле
                     const reader = new FileReader();
                     reader.onloadend = () => {
                         audioBase64 = reader.result;
@@ -192,17 +193,64 @@
             recordStatus.textContent = 'Нажмите для записи присяги';
         });
 
-        // Перед отправкой проверяем чекбокс
+        // Отправка через fetch
         const form = document.getElementById('citizenForm');
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // всегда предотвращаем стандартную отправку
+
+            // Проверка антиспам
+            const honey = document.getElementById('_honey').value;
+            if (honey) return; // бот заполнил скрытое поле
+
+            // Проверка чекбокса
             const agree = document.getElementById('agree');
             if (!agree.checked) {
-                e.preventDefault();
                 alert('Необходимо согласиться с Конституцией');
                 return;
             }
-            // Если всё хорошо, форма отправляется, браузер делает POST-запрос
-            // Formspree перенаправит обратно на страницу с параметром success
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            if (!name || !email) {
+                alert('Заполните обязательные поля');
+                return;
+            }
+
+            // Если endpoint ещё не подставлен, сообщаем об ошибке
+            if (FORMSPREE_ENDPOINT.includes('__FORMSPREE_ENDPOINT__')) {
+                alert('Ошибка конфигурации: endpoint не задан. Обратитесь к администратору.');
+                return;
+            }
+
+            // Готовим данные
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', `Новая заявка на гражданство от ${name}`);
+            if (audioDataInput.value) {
+                formData.append('audio_data', audioDataInput.value); // base64 аудио
+            }
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+
+                if (response.ok) {
+                    // Показываем сообщение об успехе
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                } else {
+                    const result = await response.json().catch(() => ({}));
+                    alert('Ошибка: ' + (result.error || 'Не удалось отправить заявку'));
+                }
+            } catch (error) {
+                alert('Сетевая ошибка: ' + error.message);
+            }
         });
     </script>
     <footer>© 2026 Демократическая Республика Интернета</footer>
